@@ -1,0 +1,27 @@
+
+@color-theme:#ff4c00;              // 主题色 #ff4c00
+@color-theme-light:#FFB99B ;      // 主色浅
+@color-assist:#F7812B;            // 辅色 ##F7812B
+@color-aux:#FFB947;               // 辅色 #FFB947 黄色
+@color-line:rgba(228,236,243,1);              // 细线的颜色
+@color-bgd:#8e8e8e;               //背景颜色
+
+
+@color-warning:#fcf8e3;      //橘黄色 警告
+@color-danger:#f2dede;      //红色 危险
+@color-success:#dff0d8;     // 浅绿色 - 成功
+@color-info:#d9edf7;        //浅蓝色 - 替换样式
+
+@color-dark:#4E4E4E;           //文本颜色 333
+@color-light:#AEAEAE;           //文本颜色 666
+@color-gray:#999;           //文本颜色 999
+@color-white:#fff;           //文本颜色 白色
+@color-black:#000;           //文本颜色 白色
+
+
+@url :'../img/';   // 只有通过压缩了的图片才能访问到
+
+.background(@name,@repeat:no-repeat){
+    background-image: url('@{url}@{name}');
+    background-repeat:@repeat ;
+}

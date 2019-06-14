@@ -1,0 +1,35 @@
+@import "theme";
+
+/*******************************************  图片裁剪  ****************************************/
+.va-cropper{
+    width: 100%;height:100%;
+    &-modal{
+        width: 100%;height:100%;position: fixed;top:0;left:0;z-index: 1000;
+    }
+    &-btns{
+        position: absolute;bottom: 20px;left:0;width: 100%;
+        display: flex;justify-content: space-around;
+    }
+    &-btn{
+        width:80px;height:32px;background-color: #fff;
+        line-height: 32px;text-align: center;cursor: pointer;
+    }
+}
+
+/*******************************************  加载中  ****************************************/
+.va-spin{
+    display: inline-block;
+    stroke:#fff;
+    fill:#fff;
+    vertical-align: middle;
+    width:28px;height:28px;
+}
+
+/******************************************* 弹框 加载 上传中 ****************************************/
+.va-loading{
+    position: fixed;top:0;left:0;width: 100%;height:100%;
+    .va-loading__popup{
+        display: flex;width: 100%;height:100%;justify-content: center;align-items: center;background-color: rgba(0,0,0,0.5);
+    }
+}
+

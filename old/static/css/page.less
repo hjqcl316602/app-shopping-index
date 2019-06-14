@@ -1,0 +1,57 @@
+@import "theme";
+
+
+
+//******************************************* 图片处理 ****************************************/
+.vvc-img__area{  width: 100%;height: 100%; display: flex;justify-content: center;align-items: center  }
+.vvc-img__area img{   max-height: 100% ; max-width: 100%;display: inline-block ; }
+.vvc-img__area img[src=""],
+.vvc-img__area img:not([src]) {  opacity: 0;  }
+.vvc-img__area .vvc-img--error{ display: none}
+.vvc-img__area img[src=""]+img.vvc-img--error,
+.vvc-img__area img:not([src])+img.vvc-img--error {
+  display: block;width: 100%;height:100%
+}
+.vvc-img__area img[src=""]+img.vvc-img--error.small,
+.vvc-img__area img:not([src])+img.vvc-img--error.small {
+  display: block;height:50%;width: auto;
+}
+.vvc-img__area.vvc-img--head{ width: 120px;height:120px;border-radius: 50%;overflow: hidden ; background-color: rgba(0,0,0,0.05)}
+.vvc-img__area.vvc-img--logo{ width: 204px;height:204px;border-radius: 50%;overflow: hidden ; background-color: rgba(0,0,0,0.05)}
+.vvc-img__area.vvc-img--modal{ width: 540px;height:456px;  }
+
+//************************************************************************ 布局方式  ****************************************************************************************/
+//********* 左边固定，右边自适应  (position_width )********/
+.vvc-pw,dl{  position: relative;  }
+.vvc-pw--fix ,dt {  position: absolute;  left:0;top:0;height:100%;width: 100px;  }
+.vvc-pw--fit,dd{  margin-left: 110px;  }
+.vvc-pw--fix[data-width='150'],.dt[data-width='150']{ width: 150px }
+.vvc-pw--fix[data-width='150']+.vvc-pw--fit{ margin-left: 160px }
+dt[data-width='150']+dd{ margin-left: 160px }
+
+//********** 一列定宽 一列自适应  (float + overflow)*******/
+.vvc-fo{  }
+.vvc-fo__uns{  margin-right: 10px;  float: left;  height:500px;  max-width: 50%;  }
+.vvc-fo__fit{  overflow: hidden;height:500px;  }
+
+//*******  高度随宽度自适应 *******/
+.vvc-ratio{}
+.vvc-ratio__outer{  position: relative;  height: 0;  width: 100%;  }
+.vvc-ratio__inner{ width: 100%;height:100% ; position: absolute;left: 0;top:0; }
+.vvc-ratio__outer[data-ratio='10:7']{  padding-top:70%;  }
+.vvc-ratio__outer[data-ratio='10:7']{  padding-top:70%;  }
+//************************************************************************ 布局方式  ****************************************************************************************/
+.vvc-btn{ height:36px;line-height: 36px;padding: 0 25px; color: #fff;font-weight: 800;border-radius: 4px; background-color: fade(@color-theme,90) ;outline: 0 ;display: inline-block;
+  cursor: pointer;
+}
+.vvc-btn:hover{ background-color: @color-theme }
+//************************************************************************ 表单  ****************************************************************************************/
+
+.vi-input{
+  padding: 5px 20px;  height:40px;  width: 100%;  border: 1px solid #dedede;
+  border-radius: 40px;  -webkit-box-sizing: border-box;  box-sizing: border-box;  background: transparent;  outline: none;  -webkit-appearance: none
+}
+.vi-textarea{
+  display: block;  padding: 10px;  width: 100%;  height: 150px;
+  border: 1px solid #dedede;  -webkit-box-sizing: border-box;  box-sizing: border-box;  border-radius: 4px;  background: transparent;  -webkit-appearance: none;
+}
